@@ -1,4 +1,5 @@
 BITS 16
+hex_chars: db "0123456789abcdef"
 
 ; <--- void print_hex(si: char* buff) --->
 print_str:
@@ -11,7 +12,6 @@ print_str:
 	jmp .print_str_loop
 .return:
 	ret
-
 
 ; <--- void print_hex(si: uchar* buff, cx: short len) --->
 print_hex:
@@ -55,5 +55,3 @@ print_char:
 	mov ah, 0xe
 	int 0x10
 	ret
-
-hex_chars: db "0123456789abcdef"

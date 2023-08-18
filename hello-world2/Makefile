@@ -7,4 +7,4 @@ boot.bin: hello-world2.asm
 	@ls -l $@  | awk '{print $$9 ": " $$5 " bytes"}'
 
 clean:
-	rm *.bin
+	rm *.bin || true

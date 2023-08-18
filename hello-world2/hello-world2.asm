@@ -55,6 +55,7 @@ msg: db "Hello from sector 2!", 0
 ; ---> void disk_params (dl: disk) <---
 disk_params:
 	mov ah, 0x48
+	mov dl, [var_bootdisk]
 	mov si, struct_disk_params
 	int 0x13
 

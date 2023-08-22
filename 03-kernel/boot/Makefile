@@ -10,8 +10,6 @@ boot.bin: boot.asm
 			false; \
 		fi
 
-	python3 ../util/write-offset.py --word 508 1 $@
-
 run: boot.bin
 	qemu-system-i386 -drive format=raw,file=$<
 
